@@ -12,6 +12,4 @@ EXPOSE 3000
 # install dependencies
 RUN npm install
 
-
-# ENTRYPOINT ["/bin/sh", "node main.js"]
 ENTRYPOINT ["node", "main.js"]
