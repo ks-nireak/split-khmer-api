@@ -1,6 +1,10 @@
 version: '3'
 
 tasks:
+  push:
+    cmds:
+      - echo "Pushing"
+      - docker push ksnireak/split-khmer-api:latest
   build:
     cmds:
       - echo "Building"
