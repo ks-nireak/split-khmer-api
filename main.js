@@ -1,8 +1,18 @@
 import { split as spliter } from 'split-khmer';
 import express from 'express';
-
+import prometheusMiddleware from 'express-prometheus-middleware';
 
 const app = express();
+
+// prometheus metrics
+app.use(prometheusMiddleware({
+  metricsPath: '/metrics',
+  collectDefaultMetrics: true,
+  requestDurationBuckets: [0.1, 0.5, 1, 1.5],
+  requestLengthBuckets: [512, 1024, 5120, 10240, 51200, 102400],
+  responseLengthBuckets: [512, 1024, 5120, 10240, 51200, 102400],
+}));
+
 // accept SIGINT signal
 process.on('SIGINT', () => {
   console.log('SIGINT signal received: closing HTTP server');

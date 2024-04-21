@@ -1,4 +1,4 @@
-# use node 16
+# use node 20 alpine image
 FROM node:20-alpine
 
 # set working directory

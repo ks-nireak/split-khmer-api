@@ -1,0 +1,11 @@
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - echo "Building"
+      - docker build -t ksnireak/split-khmer-api:latest .
+  run:
+    cmds:
+      - echo "Running startf"
+      - docker run -p 3000:3000 ksnireak/split-khmer-api:latest

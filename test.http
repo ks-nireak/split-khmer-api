@@ -1,0 +1,11 @@
+###
+GET http://localhost:3000/spliter?q=ខគោសាច់ជ្រូកជ្រួកស្ពៃ
+
+
+###
+
+GET http://localhost:3000/health
+
+
+###
+GET http://localhost:3000/metrics
